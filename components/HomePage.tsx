@@ -2,10 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/content";
 import { beeld } from "@/lib/beelden";
+import { ChainStrip } from "@/components/ChainStrip";
 import { OfferteCta } from "@/components/OfferteCta";
 import { PhoneLink } from "@/components/PhoneLink";
+import { PhotoFigure } from "@/components/PhotoFigure";
 import { PlateImg } from "@/components/PlateImg";
 import { PunchPhoto } from "@/components/PunchPhoto";
+import { JobTitle } from "@/components/JobTitle";
 import { Section } from "@/components/Section";
 
 const rows = [
@@ -61,17 +64,21 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="mt-6 min-h-[168px] flex-1">
-          <PunchPhoto beeld={hero} pattern="rounds" priority className="h-full min-h-[168px]" />
-        </div>
         <Link
           href="/werken-bij"
           data-cta="solliciteren"
-          className="flex min-h-12 items-center gap-3 bg-ink px-4 py-3 text-sheet no-underline hover:text-mark"
+          className="hero-jobs mx-4 mt-6 flex min-h-14 items-start gap-3 bg-ink px-4 py-3 text-sheet no-underline hover:text-mark md:mx-0 md:items-center"
         >
           <span className="counter">2</span>
-          <span>We groeien: 2 vacatures — plaatwerker en constructiebankwerker/lasser</span>
+          <span>
+            We groeien: 2 vacatures — plaatwerker en constructie
+            <wbr />
+            bankwerker/lasser
+          </span>
         </Link>
+        <div className="mt-6 min-h-[168px] flex-1">
+          <PunchPhoto beeld={hero} pattern="rounds" priority className="h-full min-h-[168px]" />
+        </div>
       </section>
 
       <Section name="keten" label="zetlijn 90° neer">
@@ -79,26 +86,17 @@ export function HomePage() {
         <p className="measure mt-3 text-steel">
           Ponsen, kanten, lassen en construeren in één werkplaats in Emmen. Van een enkele plaat tot een gelaste, gemonteerde constructie.
         </p>
-        <div className="chain chain-motion mt-6">
-          {content.chain.map((step) => {
-            const photo = beeld(step.image);
-            return (
-              <Link key={step.id} href={step.href} className="chain-step text-ink no-underline hover:text-brand">
-                <div className="relative h-[132px] overflow-hidden bg-plate" style={{ maxWidth: photo.w }}>
-                  <Image src={photo.src} alt={photo.alt} fill sizes="240px" className="object-cover" />
-                </div>
-                <div className="p-3">
-                  <p className="kicker">{step.label}</p>
-                  <p className="mt-2 text-[0.98rem]">{step.text}</p>
-                </div>
-              </Link>
-            );
-          })}
+        <div className="mt-6">
+          <ChainStrip />
         </div>
       </Section>
 
       <Section name="bewerkingen" label="uitslag" tone="white">
         <h2 className="display mb-2 text-[clamp(2rem,4vw,3.3rem)]">Vier bewerkingen</h2>
+        <p className="measure mb-2 text-steel">
+          Op deze site staan ze als een uitslag: gaten, een zetlijn, een naad en een schuine hoek.{" "}
+          <Link href="/diensten">Zo leest u die tekening.</Link>
+        </p>
         <div className="ruled border-y border-ink/15">
           {rows.map((row) => {
             const service = content.services[row.key];
@@ -124,11 +122,11 @@ export function HomePage() {
       <Section name="materialen" label="staal / rvs / al">
         <h2 className="display text-[clamp(2rem,4vw,3.2rem)]">Staal, RVS, aluminium</h2>
         <p className="measure mt-3">Elke bewerking doet alle drie. Aluminium lassen we met gecertificeerde aluminiumlassers.</p>
-        <ul className="ruled mt-6 border-y border-ink/15">
+        <ul className="mt-6 grid gap-3 md:grid-cols-3">
           {content.materials.map((item) => (
-            <li key={item.name} className="grid gap-1 py-4 md:grid-cols-[180px_1fr] md:items-baseline">
-              <h3 className="display text-2xl">{item.name}</h3>
-              <p>{item.text}</p>
+            <li key={item.name} className="hole-field border border-ink/15 bg-white p-4">
+              <h3 className="display text-[clamp(1.6rem,3vw,2.2rem)]">{item.name}</h3>
+              <p className="mt-3">{item.text}</p>
             </li>
           ))}
         </ul>
@@ -173,7 +171,7 @@ export function HomePage() {
         <ul className="swipe">
           {work.map((item) => (
             <li key={item.src}>
-              <PlateImg beeld={item} sizes="(max-width: 800px) 78vw, 480px" />
+              <PhotoFigure beeld={item} sizes="(max-width: 800px) 78vw, 480px" />
             </li>
           ))}
         </ul>
@@ -205,7 +203,9 @@ export function HomePage() {
               <div className="ruled mt-6 border-y border-sheet/25">
                 {content.vacancies.map((vacancy) => (
                   <article key={vacancy.slug} className="py-4">
-                    <h3 className="display text-2xl text-sheet">{vacancy.title}</h3>
+                    <h3 className="display text-2xl text-sheet">
+                      <JobTitle title={vacancy.title} />
+                    </h3>
                     <p className="mt-1 font-mono text-sm text-mark">
                       {vacancy.hours} · {vacancy.start} · MBO · 5 jaar ervaring
                     </p>

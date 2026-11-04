@@ -88,28 +88,32 @@ export function Gallery() {
         })}
       </div>
 
-      <ul className="swipe">
+      <p className="kicker mb-4">{items.length} foto&apos;s</p>
+      <ul className="archive">
         {items.map((item) => (
-          <li key={item.src} style={{ flexBasis: `min(78%, ${Math.min(item.w, 520)}px)` }}>
-            <button
-              type="button"
-              className="block w-full border-0 bg-transparent p-0 text-left"
-              onClick={() => setOpen(item)}
-            >
-              {/* Native img so a 600px source is never requested larger than itself. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={item.src}
-                alt={item.alt}
-                width={item.w}
-                height={item.h}
-                style={{ width: "100%", maxWidth: item.w, height: "auto", display: "block" }}
-              />
-            </button>
+          <li key={item.src}>
+            <figure>
+              <button
+                type="button"
+                className="block w-full border-0 bg-transparent p-0 text-left"
+                onClick={() => setOpen(item)}
+              >
+                {/* Native img so a 600px source is never requested larger than itself. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  width={item.w}
+                  height={item.h}
+                  style={{ width: "100%", maxWidth: item.w, height: "auto", display: "block" }}
+                />
+              </button>
+              <figcaption className="photo-note">{item.alt}</figcaption>
+            </figure>
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-sm text-steel">Veeg opzij. De volgende foto blijft in beeld. Klik een foto om hem groter te zien.</p>
+      <p className="mt-3 text-sm text-steel">Klik een foto om hem groter te zien. Vorige en volgende blijven bij het gekozen filter.</p>
 
       <dialog
         ref={dialog}

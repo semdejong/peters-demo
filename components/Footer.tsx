@@ -3,9 +3,12 @@ import { content } from "@/content";
 import { PhoneLink } from "@/components/PhoneLink";
 
 const links = [
-  { href: "/diensten", label: "Diensten" },
-  { href: "/werken-bij", label: "Werken bij" },
+  { href: "/ponsnibbelen", label: "Ponsnibbelen" },
+  { href: "/cnc-kanten", label: "CNC-kanten" },
+  { href: "/lassen-staal-rvs-en-aluminium", label: "Lassen" },
+  { href: "/constructiewerk", label: "Constructiewerk" },
   { href: "/fotos", label: "Foto's" },
+  { href: "/werken-bij", label: "Werken bij" },
   { href: "/over-ons/algemene-voorwaarden", label: "Algemene voorwaarden" },
   { href: "/privacy", label: "Privacy" },
 ];

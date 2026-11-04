@@ -4,7 +4,8 @@ import { beeld } from "@/lib/beelden";
 import { ApplyForm } from "@/components/ApplyForm";
 import { PageHero } from "@/components/PageHero";
 import { PhoneLink } from "@/components/PhoneLink";
-import { PlateImg } from "@/components/PlateImg";
+import { PhotoFigure } from "@/components/PhotoFigure";
+import { JobTitle } from "@/components/JobTitle";
 import { Section } from "@/components/Section";
 
 function jobJson(vacancy: Vacancy) {
@@ -41,10 +42,14 @@ export function VacancyView({ vacancy }: { vacancy: Vacancy }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jobJson(vacancy)).replace(/</g, "\\u003c") }} />
-      <PageHero label="vacature" kicker="Werken bij Peters" title={vacancy.title} lede={vacancy.intro}>
-        <p className="kicker m-0">
-          {vacancy.hours} · {vacancy.start}
-        </p>
+      <PageHero label="vacature" kicker="Werken bij Peters" title={<JobTitle title={vacancy.title} />} lede={vacancy.intro}>
+        <ul className="flex flex-wrap gap-2">
+          {[vacancy.hours, vacancy.start, "MBO", "5 jaar ervaring"].map((item) => (
+            <li key={item} className="border border-ink bg-white px-2 py-1 font-mono text-sm">
+              {item}
+            </li>
+          ))}
+        </ul>
         <a href="#solliciteren" data-cta="solliciteren" className="btn btn-solid">
           Solliciteren
         </a>
@@ -81,10 +86,10 @@ export function VacancyView({ vacancy }: { vacancy: Vacancy }) {
       </Section>
       <Section name="werkplaats" label="machine" tone="white">
         <h2 className="display mb-5 text-3xl">De werkplaats</h2>
-        <ul className="swipe">
+        <ul className="grid gap-6 md:grid-cols-3">
           {images.map((item) => (
             <li key={item.src}>
-              <PlateImg beeld={item} sizes="(max-width: 800px) 78vw, 480px" />
+              <PhotoFigure beeld={item} sizes="(max-width: 800px) 100vw, 360px" />
             </li>
           ))}
         </ul>

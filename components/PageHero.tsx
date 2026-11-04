@@ -9,7 +9,7 @@ export function PageHero({
 }: {
   label: string;
   kicker?: string;
-  title: string;
+  title: ReactNode;
   lede?: string;
   children?: ReactNode;
 }) {

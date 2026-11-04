@@ -76,7 +76,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="only-compact mt-2 gap-2">
+        <div className="mt-2 hidden gap-2 max-xl:flex">
           <Link href="/werken-bij" data-cta="solliciteren" className="btn flex-1">
             Werken bij
             <span className="counter ml-2" aria-label="2 vacatures">

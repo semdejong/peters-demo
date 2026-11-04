@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { content } from "@/content";
+import { content, type ServiceKey } from "@/content";
 import { FaqList } from "@/components/FaqList";
 import { PageHero } from "@/components/PageHero";
 import { PhoneLink } from "@/components/PhoneLink";
@@ -15,12 +15,14 @@ export const metadata: Metadata = {
     "Stuur uw tekening, DXF, STEP of PDF. Peters Metaaltechniek maakt een offerte voor ponsnibbelen, CNC-kanten, lassen of constructiewerk in Emmen.",
 };
 
-const bewerkingen = [
-  { href: "/ponsnibbelen", label: "Ponsnibbelen" },
-  { href: "/cnc-kanten", label: "CNC-kanten" },
-  { href: "/lassen-staal-rvs-en-aluminium", label: "Lassen" },
-  { href: "/constructiewerk", label: "Constructiewerk" },
+const bewerkingen: { key: ServiceKey; href: string; label: string }[] = [
+  { key: "ponsnibbelen", href: "/ponsnibbelen", label: "Ponsnibbelen" },
+  { key: "kanten", href: "/cnc-kanten", label: "CNC-kanten" },
+  { key: "lassen", href: "/lassen-staal-rvs-en-aluminium", label: "Lassen" },
+  { key: "constructie", href: "/constructiewerk", label: "Constructiewerk" },
 ];
+
+const bestanden = ["DXF", "STEP", "PDF", "DWG", "STP", "JPG", "PNG"];
 
 export default function OffertePage() {
   return (
@@ -38,8 +40,15 @@ export default function OffertePage() {
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_280px]">
           <div>
             <h2 className="display text-3xl">Wat u meestuurt</h2>
+            <ul className="mt-4 flex flex-wrap gap-2" aria-label="Bestandstypen">
+              {bestanden.map((item) => (
+                <li key={item} className="border border-ink bg-white px-3 py-2 font-mono text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
             <ul className="ruled mt-4 border-y border-ink/15">
-              <li className="py-3">Tekening of bestand: DXF, STEP, PDF, DWG, STP, JPG of PNG</li>
+              <li className="py-3">Tekening of bestand in een van die typen</li>
               <li className="py-3">Materiaal: staal, RVS of aluminium</li>
               <li className="py-3">Plaatdikte en aantal</li>
               <li className="py-3">Serie of eenmalig</li>
@@ -62,13 +71,18 @@ export default function OffertePage() {
         <h2 className="display text-3xl">Bewerking</h2>
         <ul className="ruled mt-4 border-y border-ink/15">
           {bewerkingen.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href} className="flex min-h-11 items-center text-ink no-underline hover:text-brand">
+            <li key={item.href} className="grid gap-2 py-4 md:grid-cols-[220px_1fr_auto] md:items-center">
+              <Link href={item.href} className="text-lg font-medium text-ink no-underline hover:text-brand">
                 {item.label}
+              </Link>
+              <p className="text-steel">{content.services[item.key].lede}</p>
+              <Link href={`/offerte?bewerking=${item.key === "constructie" ? "constructiewerk" : item.key}`} data-cta="offerte" className="btn">
+                Deze bewerking
               </Link>
             </li>
           ))}
         </ul>
+        <p className="measure mt-4 text-steel">{content.quotes.kracht}</p>
       </Section>
 
       <Section name="materiaal-keuze" label="materiaal">

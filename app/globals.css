@@ -128,7 +128,8 @@ a:hover { color: var(--brand); }
   grid-template-columns: minmax(0, 1fr);
   gap: 0.25rem 1.25rem;
 }
-.sheet-grid > * { min-width: 0; }
+.sheet-grid > *,
+.grid > * { min-width: 0; }
 @media (min-width: 800px) {
   .sheet-grid { grid-template-columns: 92px minmax(0, 1fr); }
 }
@@ -274,6 +275,29 @@ a:hover { color: var(--brand); }
   scroll-snap-align: start;
   flex: 0 0 min(78%, 420px);
 }
+
+.archive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.35rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.archive > * { min-width: 0; }
+@media (min-width: 720px) {
+  .archive { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1100px) {
+  .archive { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.keep-line {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.hero-jobs span:last-child { min-width: 0; }
 
 .chain {
   display: flex;
@@ -482,4 +506,60 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 
 @media (max-width: 390px) {
   .frame { width: min(1180px, calc(100% - 1.25rem)); }
+}
+
+.photo-note {
+  margin-top: 0.45rem;
+  color: var(--steel);
+  font-family: var(--font-plex), ui-monospace, monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+}
+.spec-grid > div {
+  min-width: 0;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+}
+@media (min-width: 800px) {
+  .spec-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .spec-grid > div { padding-right: 1.25rem; }
+}
+
+.hole-field {
+  background-image:
+    radial-gradient(circle at 8px 10px, transparent 3px, transparent 3.2px),
+    radial-gradient(circle, rgb(38 86 132 / 16%) 1.6px, transparent 1.8px),
+    radial-gradient(circle, rgb(38 86 132 / 16%) 1.6px, transparent 1.8px);
+  background-size: auto, 16px 28px, 16px 28px;
+  background-position: 0 0, 0 0, 8px 14px;
+}
+
+.chamfer {
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 16px, 100% 100%, 0 100%);
+}
+
+@media (min-width: 800px) {
+  .anno {
+    border-right: 1px dashed color-mix(in srgb, var(--brand) 55%, transparent);
+  }
+}
+
+section,
+.hero,
+.site-header,
+.site-footer {
+  max-width: 100%;
+}
+
+h1, h2, h3, p, li, figcaption, dd {
+  overflow-wrap: break-word;
+}
+h1, h2, h3, .display {
+  overflow-wrap: break-word;
 }

@@ -395,3 +395,101 @@ export const content = {
 export type Content = typeof content;
 export type ServiceKey = keyof typeof content.services;
 export type Vacancy = (typeof content.vacancies)[number];
+
+/** Extra blad per bewerking. Alleen zinnen die uit hun eigen tekst volgen. */
+export const sheets: Record<
+  ServiceKey,
+  {
+    spec: { label: string; value: string }[];
+    makes: string[];
+    place: string;
+    send: string[];
+  }
+> = {
+  ponsnibbelen: {
+    spec: [
+      { label: "Machine", value: "Moderne CNC-pons-nibbelmachine" },
+      { label: "Gereedschap", value: "Uitgebreid assortiment ponsgereedschappen" },
+      { label: "Materiaal", value: "Staal, RVS en aluminium" },
+      { label: "Orders", value: "Grote en kleine productieorders" },
+      { label: "Restafval", value: "De machine werkt efficiënt en creëert weinig restafval" },
+    ],
+    makes: [
+      "Perforaties in een vlakke plaat",
+      "Gaten en gatenpatronen",
+      "Afbeeldingen, opgebouwd uit geponste gaten",
+      "Zowel een serie als een kleine productieorder",
+    ],
+    place:
+      "Ponsnibbelen begint bij een vlakke plaat. Het geponste deel kan in dezelfde werkplaats gezet, gelast of in een constructie opgenomen worden.",
+    send: [
+      "Tekening of bestand: DXF, STEP of PDF",
+      "Materiaal en plaatdikte",
+      "Aantal, en of het een serie of een kleine order is",
+      "Welke gaten, perforaties of welk patroon u nodig heeft",
+    ],
+  },
+  kanten: {
+    spec: [
+      { label: "Machines", value: "Twee kantbanken" },
+      { label: "Gereedschap", value: "Groot assortiment buiggereedschappen" },
+      { label: "Materiaal", value: "Aluminium, staal en RVS" },
+      { label: "Series", value: "Serieproductie en enkele stuks" },
+      { label: "Omvang", value: "Grote en kleine series" },
+    ],
+    makes: [
+      "Zetten van vlakke plaat tot een gezet deel",
+      "Enkel stuk of een serie",
+      "Aluminium, staal en RVS door elkaar in hetzelfde huis",
+    ],
+    place:
+      "Het zetten van plaatwerk is één van onze specialiteiten. Een vlakke plaat, al dan niet geponst, wordt hier gezet. Daarna kan het deel gelast of gemonteerd worden.",
+    send: [
+      "Tekening of bestand: DXF, STEP of PDF",
+      "Materiaal en plaatdikte",
+      "Aantal",
+      "Serie of eenmalig",
+    ],
+  },
+  lassen: {
+    spec: [
+      { label: "Materialen", value: "Staal, RVS en aluminium" },
+      { label: "Aluminium", value: "Gecertificeerde aluminiumlassers" },
+      { label: "Werk", value: "Samenstellingen, deksels, vaten, trappen, hekwerken, bordessen en frames" },
+    ],
+    makes: ["Dekkels", "Vaten", "Trappen", "Hekwerken", "Bordessen", "Frames", "Samenstellingen"],
+    place:
+      "Gezette en geponste delen komen hier samen. We lassen staal, RVS en aluminium, en het lassen van samenstellingen.",
+    send: [
+      "Tekening of bestand",
+      "Materiaal: staal, RVS of aluminium",
+      "Wat er gelast moet worden",
+      "Aantal, serie of enkel stuk",
+    ],
+  },
+  constructie: {
+    spec: [
+      { label: "Materiaal", value: "Staal, RVS of aluminium" },
+      { label: "Toepassing", value: "Trappen, bordessen en constructies" },
+      { label: "Werk", value: "Nieuwbouw en renovaties" },
+      { label: "Traject", value: "Ontwerp, productie en montage" },
+      { label: "Norm", value: "EN 1090-2 EXC2" },
+    ],
+    makes: [
+      "Trappen",
+      "Bordessen",
+      "Constructies voor nieuwbouw",
+      "Constructies voor renovaties",
+      "Montage op locatie",
+    ],
+    place:
+      "Constructiewerk is maatwerk van begin tot eind. Ponsen, kanten en lassen zitten in hetzelfde huis, en montage hoort erbij.",
+    send: [
+      "Tekening of bestand",
+      "Materiaal",
+      "Trap, bordes of andere constructie",
+      "Of montage nodig is",
+      "Gewenste levering, als u die al weet",
+    ],
+  },
+};
