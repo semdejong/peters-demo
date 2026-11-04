@@ -66,16 +66,15 @@ export function ServiceView({ serviceKey }: { serviceKey: ServiceKey }) {
       </Section>
 
       <Section name="dienst" label="plaat" tone="white">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,68ch)_minmax(0,1fr)]">
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(16rem,22rem)]">
           <div className="grid gap-4">
             {service.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <p>{sheet.place}</p>
             <p>{content.quotes.kracht}</p>
           </div>
-          <div>
-            <h2 className="display text-3xl">Wat we maken</h2>
+          <div className="min-w-0">
+            <h2 className="display text-[1.7rem] leading-none">Wat we maken</h2>
             <ul className="ruled mt-4 border-y border-ink/15">
               {sheet.makes.map((item) => (
                 <li key={item} className="py-3">
@@ -89,7 +88,7 @@ export function ServiceView({ serviceKey }: { serviceKey: ServiceKey }) {
 
       <Section name="dienst-fotos" label="werkplaats">
         <h2 className="display text-[clamp(1.8rem,3vw,2.8rem)]">In de werkplaats</h2>
-        <p className="measure mt-3 text-steel">Foto&apos;s uit Emmen. Elk beeld is een eigen opname, niet een tweede uitsnede van dezelfde foto.</p>
+        <p className="measure mt-3 text-steel">Foto&apos;s uit de werkplaats in Emmen.</p>
         <ul className="mt-6 grid gap-8 md:grid-cols-2">
           {rest.map((item) => (
             <li key={item.src}>
@@ -130,7 +129,7 @@ export function ServiceView({ serviceKey }: { serviceKey: ServiceKey }) {
         </div>
       </Section>
 
-      <Section name="meesturen" label="dxf / step / pdf">
+      <Section name="meesturen" label="bestand">
         <h2 className="display text-3xl">Wat u meestuurt</h2>
         <ul className="ruled mt-4 border-y border-ink/15">
           {sheet.send.map((item) => (
@@ -152,7 +151,7 @@ export function ServiceView({ serviceKey }: { serviceKey: ServiceKey }) {
         <FaqList items={service.faq} />
       </Section>
 
-      <Section name="gerelateerd" label="ook in huis">
+      <Section name="gerelateerd" label="ook">
         <h2 className="display mb-2 text-3xl">Ook onder dit dak</h2>
         <ul className="ruled mt-4 border-y border-ink/15">
           {keys

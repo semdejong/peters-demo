@@ -48,7 +48,7 @@ export default function FotosPage() {
         title="Werk in beeld."
         lede="Ponsen, kanten, lassen en constructiewerk uit de werkplaats in Emmen."
       />
-      <Section name="fotos-legenda" label="vier soorten" tone="white">
+      <Section name="fotos-legenda" label="soorten" tone="white">
         <h2 className="display text-[clamp(1.8rem,3vw,2.6rem)]">Vier soorten werk</h2>
         <p className="measure mt-3 text-steel">
           Elke foto hoort bij één bewerking. De tekening ernaast is de uitslag van deze site: gaten voor ponsen, een zetlijn voor kanten, een naad voor lassen, een schuine hoek voor constructiewerk.

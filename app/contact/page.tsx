@@ -35,8 +35,10 @@ export default function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="kicker">Bezoek</p>
-            <p className="display mt-3 text-[clamp(1.8rem,3vw,2.6rem)]">
-              {contact.street}
+            <p className="address-stamp mt-3">
+              {contact.street.split(" ")[0]}
+              <br />
+              {contact.street.split(" ").slice(1).join(" ")}
               <br />
               {contact.postalCode} {contact.city}
             </p>

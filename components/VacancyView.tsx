@@ -74,7 +74,7 @@ export function VacancyView({ vacancy }: { vacancy: Vacancy }) {
           ))}
         </ul>
       </Section>
-      <Section name="aanbod" label="zetlijn 90° op">
+      <Section name="aanbod" label="aanbod">
         <h2 className="display text-3xl">Wat bieden wij</h2>
         <ul className="mt-4 grid gap-3">
           {content.offer.weBieden.map((line) => (

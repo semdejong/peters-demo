@@ -27,7 +27,7 @@ export default function OverOnsPage() {
   return (
     <>
       <PageHero label="over ons" kicker={content.company.tagline} title="Betrouwbare partner in metaalwerk." lede={content.quotes.partner} />
-      <Section name="verhaal" label="herman peters">
+      <Section name="verhaal" label="herman">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,68ch)_minmax(0,1fr)] lg:items-start">
           <div className="grid gap-4">
             <p className="display text-[clamp(1.5rem,3vw,2.1rem)] leading-tight">{content.quotes.allround}</p>
@@ -114,7 +114,7 @@ export default function OverOnsPage() {
         </ul>
         <p className="mt-6 border-t border-dashed border-brand pt-4">Voor CNC draai- en freeswerk: EMD Fijnmechanica</p>
       </Section>
-      <Section name="groei" label="vacature 2" tone="white">
+      <Section name="groei" label="groei" tone="white">
         <h2 className="display text-3xl">We groeien</h2>
         <p className="measure mt-3">Door de groei van het bedrijf en het aantal opdrachten staan er twee vacatures open. Peters is een erkend leerbedrijf.</p>
         <Link href="/werken-bij" data-cta="solliciteren" className="btn mt-5">

@@ -93,7 +93,7 @@ export default function WerkenBijPage() {
           </div>
         </div>
       </Section>
-      <Section name="solliciteren" label="herman peters">
+      <Section name="solliciteren" label="herman">
         <h2 className="display text-3xl">Zo solliciteer je</h2>
         <ol className="mt-6 grid gap-4 md:grid-cols-3">
           <li className="border-t-2 border-ink pt-3">

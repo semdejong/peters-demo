@@ -81,7 +81,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <Section name="keten" label="zetlijn 90° neer">
+      <Section name="keten" label="90°">
         <h2 className="display text-[clamp(2rem,4vw,3.3rem)]">Van plaat tot montage</h2>
         <p className="measure mt-3 text-steel">
           Ponsen, kanten, lassen en construeren in één werkplaats in Emmen. Van een enkele plaat tot een gelaste, gemonteerde constructie.
@@ -95,7 +95,7 @@ export function HomePage() {
         <h2 className="display mb-2 text-[clamp(2rem,4vw,3.3rem)]">Vier bewerkingen</h2>
         <p className="measure mb-2 text-steel">
           Op deze site staan ze als een uitslag: gaten, een zetlijn, een naad en een schuine hoek.{" "}
-          <Link href="/diensten">Zo leest u die tekening.</Link>
+          <Link href="/diensten">Lees de uitslag.</Link>
         </p>
         <div className="ruled border-y border-ink/15">
           {rows.map((row) => {
@@ -119,7 +119,7 @@ export function HomePage() {
         </div>
       </Section>
 
-      <Section name="materialen" label="staal / rvs / al">
+      <Section name="materialen" label="materiaal">
         <h2 className="display text-[clamp(2rem,4vw,3.2rem)]">Staal, RVS, aluminium</h2>
         <p className="measure mt-3">Elke bewerking doet alle drie. Aluminium lassen we met gecertificeerde aluminiumlassers.</p>
         <ul className="mt-6 grid gap-3 md:grid-cols-3">
@@ -132,7 +132,7 @@ export function HomePage() {
         </ul>
       </Section>
 
-      <Section name="serie" label="serie / stuk" tone="white">
+      <Section name="serie" label="serie" tone="white">
         <h2 className="display max-w-[16ch] text-[clamp(2rem,4vw,3.3rem)]">Serie of enkel stuk</h2>
         <ul className="ruled mt-6 border-y border-ink/15">
           <li className="py-3">Zowel serieproductie als enkele stuks.</li>

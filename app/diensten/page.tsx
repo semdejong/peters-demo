@@ -65,7 +65,7 @@ export default function DienstenPage() {
           <ChainStrip />
         </div>
       </Section>
-      <Section name="leeswijzer" label="uitslag" tone="white">
+      <Section name="leeswijzer" label="lees" tone="white">
         <h2 className="display text-[clamp(1.8rem,3vw,2.8rem)]">Zo leest u de uitslag</h2>
         <p className="measure mt-3">
           Een uitslag is de plaat, platgetekend, vóórdat hij gezet wordt. Op deze site is dat de manier waarop de vier bewerkingen naast elkaar staan.

@@ -38,7 +38,7 @@ export default function NotFound() {
             <li key={plate.href}>
               <Link href={plate.href} className="grid gap-3 border border-ink/15 bg-sheet p-3 text-ink no-underline hover:border-brand">
                 <Uitslag mark={plate.mark} className="w-full" />
-                <span className="display text-xl">{plate.title}</span>
+                <span className="display text-[1.2rem] leading-tight">{plate.title}</span>
               </Link>
             </li>
           ))}

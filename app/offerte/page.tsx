@@ -36,9 +36,9 @@ export default function OffertePage() {
         <PhoneLink className="btn btn-solid">Bel {content.contact.phone}</PhoneLink>
       </PageHero>
 
-      <Section name="wat-sturen" label="dxf / step / pdf">
-        <div className="grid items-center gap-8 lg:grid-cols-[1fr_280px]">
-          <div>
+      <Section name="wat-sturen" label="bestand">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)]">
+          <div className="min-w-0">
             <h2 className="display text-3xl">Wat u meestuurt</h2>
             <ul className="mt-4 flex flex-wrap gap-2" aria-label="Bestandstypen">
               {bestanden.map((item) => (
@@ -61,8 +61,8 @@ export default function OffertePage() {
             alt="Uitslag van een vlakke plaat met zetlijnen, ronde gaten, vierkante gaten en sleuven"
             width={1280}
             height={720}
-            className="h-auto w-full border border-ink/15 bg-white"
-            style={{ maxWidth: 420 }}
+            sizes="420px"
+            className="h-auto w-full max-w-full border border-ink/15 bg-white"
           />
         </div>
       </Section>
@@ -97,7 +97,7 @@ export default function OffertePage() {
         </ul>
       </Section>
 
-      <Section name="zekerheid" label="iso / vca / exc2" tone="white">
+      <Section name="zekerheid" label="exc2" tone="white">
         <h2 className="display text-3xl">Waar u op rekent</h2>
         <ul className="ruled mt-4 border-y border-ink/15">
           <li className="py-3">ISO 9001</li>

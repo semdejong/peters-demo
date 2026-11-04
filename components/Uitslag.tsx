@@ -33,10 +33,13 @@ function Holes() {
 function Bend() {
   return (
     <g>
-      <line x1="36" y1="46" x2="176" y2="46" stroke="#265684" strokeDasharray="5 4" />
+      <path d="M36 78 H176 L168 112 H44 Z" fill="#E7EAEC" stroke="#265684" strokeWidth="1.15" />
+      <line x1="36" y1="48" x2="176" y2="48" stroke="#265684" strokeDasharray="5 4" />
       <line x1="36" y1="78" x2="176" y2="78" stroke="#265684" strokeDasharray="5 4" />
-      <rect x="148" y="40" width="28" height="12" fill="#13212E" />
-      <text x="162" y="49" textAnchor="middle" fill="#F2C230" fontFamily="ui-monospace, monospace" fontSize="7">
+      <line x1="36" y1="42" x2="36" y2="54" stroke="#13212E" />
+      <line x1="176" y1="42" x2="176" y2="54" stroke="#13212E" />
+      <rect x="146" y="40" width="28" height="12" fill="#13212E" />
+      <text x="160" y="49" textAnchor="middle" fill="#F2C230" fontFamily="ui-monospace, monospace" fontSize="7">
         90°
       </text>
     </g>
@@ -44,12 +47,16 @@ function Bend() {
 }
 
 function Seam() {
-  const stitches = [40, 58, 76, 94, 112, 130, 148];
+  const stitches = [42, 62, 82, 102, 122, 142];
   return (
     <g>
+      <line x1="36" y1="92" x2="172" y2="92" stroke="#265684" strokeWidth="1.25" />
       {stitches.map((x) => (
-        <path key={x} d={`M${x} 96 L${x + 10} 88`} stroke="#13212E" strokeWidth="2.4" strokeLinecap="square" />
+        <path key={x} d={`M${x} 84 L${x + 12} 100`} stroke="#13212E" strokeWidth="2.5" strokeLinecap="square" />
       ))}
+      <circle cx="52" cy="48" r="3" fill="#265684" />
+      <circle cx="78" cy="48" r="3" fill="#265684" />
+      <circle cx="104" cy="48" r="3" fill="#265684" />
     </g>
   );
 }
