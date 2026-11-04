@@ -1,0 +1,317 @@
+[
+ {
+  "src": "/img/110.jpg",
+  "w": 1750,
+  "h": 556,
+  "category": "pand",
+  "alt": "Bedrijfspand van Peters Metaaltechniek aan de Willem Schoutenstraat in Emmen"
+ },
+ {
+  "src": "/img/114.jpg",
+  "w": 1750,
+  "h": 545,
+  "category": "lassen",
+  "alt": "Lasser in blauwe Peters-overall aan het lassen, met vonken"
+ },
+ {
+  "src": "/img/146.jpg",
+  "w": 1750,
+  "h": 556,
+  "category": "lassen",
+  "alt": "Lasser in Peters-overall aan het lassen"
+ },
+ {
+  "src": "/img/153.jpg",
+  "w": 1750,
+  "h": 552,
+  "category": "lassen",
+  "alt": "Lassen van een stalen samenstelling"
+ },
+ {
+  "src": "/img/181.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "lassen",
+  "alt": "Laswerk met vonken in de werkplaats"
+ },
+ {
+  "src": "/img/129.jpg",
+  "w": 1750,
+  "h": 554,
+  "category": "lassen",
+  "alt": "Lasser met lashelm aan het TIG-lassen"
+ },
+ {
+  "src": "/img/147.jpg",
+  "w": 1750,
+  "h": 551,
+  "category": "lassen",
+  "alt": "Lasser met lashelm aan het lassen"
+ },
+ {
+  "src": "/img/180.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "lassen",
+  "alt": "Close-up van een lasboog op een werkstuk"
+ },
+ {
+  "src": "/img/199.jpg",
+  "w": 1744,
+  "h": 555,
+  "category": "lassen",
+  "alt": "Close-up van een lasboog op een werkstuk"
+ },
+ {
+  "src": "/img/139.jpg",
+  "w": 1750,
+  "h": 470,
+  "category": "kanten",
+  "alt": "Kantbank zet een plaat, met boven- en ondergereedschap"
+ },
+ {
+  "src": "/img/142.jpg",
+  "w": 1750,
+  "h": 555,
+  "category": "kanten",
+  "alt": "Kantbank met gereedschappen en een gezette plaat"
+ },
+ {
+  "src": "/img/149.jpg",
+  "w": 1750,
+  "h": 551,
+  "category": "kanten",
+  "alt": "Kantbank met gereedschappen en een gezette plaat"
+ },
+ {
+  "src": "/img/170.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "kanten",
+  "alt": "Kantbank met gezette plaat"
+ },
+ {
+  "src": "/img/203.jpg",
+  "w": 1739,
+  "h": 555,
+  "category": "kanten",
+  "alt": "Kantbank met gezette plaat"
+ },
+ {
+  "src": "/img/143.jpg",
+  "w": 1745,
+  "h": 555,
+  "category": "kanten",
+  "alt": "Close-up van een gezette plaat in de kantbank"
+ },
+ {
+  "src": "/img/151.jpg",
+  "w": 1750,
+  "h": 556,
+  "category": "kanten",
+  "alt": "Close-up van een gezette plaat in de kantbank"
+ },
+ {
+  "src": "/img/179.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "kanten",
+  "alt": "Close-up van een gezette plaat in de kantbank"
+ },
+ {
+  "src": "/img/140.jpg",
+  "w": 1750,
+  "h": 552,
+  "category": "ponsen",
+  "alt": "CNC-pons-nibbelmachine in de werkplaats"
+ },
+ {
+  "src": "/img/148.jpg",
+  "w": 1750,
+  "h": 554,
+  "category": "ponsen",
+  "alt": "CNC-pons-nibbelmachine in de werkplaats"
+ },
+ {
+  "src": "/img/152.jpg",
+  "w": 1745,
+  "h": 555,
+  "category": "ponsen",
+  "alt": "CNC-pons-nibbelmachine in de werkplaats"
+ },
+ {
+  "src": "/img/205.jpg",
+  "w": 1750,
+  "h": 556,
+  "category": "ponsen",
+  "alt": "CNC-pons-nibbelmachine in de werkplaats"
+ },
+ {
+  "src": "/img/126.jpg",
+  "w": 1750,
+  "h": 556,
+  "category": "ponsen",
+  "alt": "Geponste plaat met gatenpatroon en gezette rand"
+ },
+ {
+  "src": "/img/173.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "ponsen",
+  "alt": "Geponste plaat met gatenpatroon"
+ },
+ {
+  "src": "/img/198.jpg",
+  "w": 1750,
+  "h": 553,
+  "category": "ponsen",
+  "alt": "Geponste plaat met gatenpatroon en gezette rand"
+ },
+ {
+  "src": "/img/128.jpg",
+  "w": 1750,
+  "h": 556,
+  "category": "ponsen",
+  "alt": "Plaat met geponste perforaties"
+ },
+ {
+  "src": "/img/176.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "ponsen",
+  "alt": "Plaat met geponste perforaties"
+ },
+ {
+  "src": "/img/201.jpg",
+  "w": 1744,
+  "h": 555,
+  "category": "ponsen",
+  "alt": "Plaat met geponste perforaties"
+ },
+ {
+  "src": "/img/191.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "ponsen",
+  "alt": "Plaat met geponste perforaties"
+ },
+ {
+  "src": "/img/141.jpg",
+  "w": 1750,
+  "h": 552,
+  "category": "ponsen",
+  "alt": "Geperforeerde plaat met een patroon van vlakken"
+ },
+ {
+  "src": "/img/174.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "ponsen",
+  "alt": "Geperforeerde plaat met een patroon van vlakken"
+ },
+ {
+  "src": "/img/175.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "ponsen",
+  "alt": "Plaat met geponst perforatiepatroon"
+ },
+ {
+  "src": "/img/162.jpg",
+  "w": 1750,
+  "h": 529,
+  "category": "constructie",
+  "alt": "Stalen bordes met leuningen in aanbouw"
+ },
+ {
+  "src": "/img/183.jpg",
+  "w": 600,
+  "h": 450,
+  "category": "constructie",
+  "alt": "Stalen bordes met leuningen"
+ },
+ {
+  "src": "/img/186.jpg",
+  "w": 1743,
+  "h": 555,
+  "category": "constructie",
+  "alt": "Stalen bordes met leuningen"
+ },
+ {
+  "src": "/img/165.jpg",
+  "w": 1750,
+  "h": 555,
+  "category": "constructie",
+  "alt": "Stalen frameconstructie"
+ },
+ {
+  "src": "/img/188.jpg",
+  "w": 1745,
+  "h": 555,
+  "category": "constructie",
+  "alt": "Stalen frameconstructie"
+ },
+ {
+  "src": "/img/196.jpg",
+  "w": 1750,
+  "h": 555,
+  "category": "constructie",
+  "alt": "Stalen frameconstructie"
+ },
+ {
+  "src": "/img/182.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "constructie",
+  "alt": "Stalen frameconstructie van dichtbij"
+ },
+ {
+  "src": "/img/184.jpg",
+  "w": 600,
+  "h": 450,
+  "category": "constructie",
+  "alt": "Stalen buitentrap met leuning bij een gebouw"
+ },
+ {
+  "src": "/img/185.jpg",
+  "w": 600,
+  "h": 450,
+  "category": "constructie",
+  "alt": "Stalen frameconstructie buiten opgebouwd"
+ },
+ {
+  "src": "/img/187.jpg",
+  "w": 1743,
+  "h": 555,
+  "category": "constructie",
+  "alt": "Stalen trap en bordes met hekwerk"
+ },
+ {
+  "src": "/img/194.jpg",
+  "w": 590,
+  "h": 600,
+  "category": "constructie",
+  "alt": "Montage van een stalen constructie met een hoogwerker"
+ },
+ {
+  "src": "/img/192.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "plaatwerk",
+  "alt": "RVS plaatwerkdeel, een kanaal met flens"
+ },
+ {
+  "src": "/img/193.jpg",
+  "w": 600,
+  "h": 202,
+  "category": "plaatwerk",
+  "alt": "Gerold RVS plaatwerkdeel"
+ },
+ {
+  "src": "/img/229.jpg",
+  "w": 600,
+  "h": 556,
+  "category": "nieuws",
+  "alt": "Opname in de werkplaats voor het RTL 4-programma Van Passie Naar Droombaan (2017)"
+ }
+]
