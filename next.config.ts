@@ -14,7 +14,18 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [{ protocol: "https", hostname: "**" }],
   },
-  // Demo's: nooit indexeren, op elke route.
+  async redirects() {
+    return [
+      { source: "/home", destination: "/", permanent: true },
+      { source: "/vacatures", destination: "/werken-bij", permanent: true },
+      { source: "/nieuws", destination: "/over-ons", permanent: true },
+      { source: "/fotos/ponsen", destination: "/fotos?filter=ponsen", permanent: true },
+      { source: "/fotos/kanten", destination: "/fotos?filter=kanten", permanent: true },
+      { source: "/fotos/lassen", destination: "/fotos?filter=lassen", permanent: true },
+      { source: "/fotos/constructiewerk", destination: "/fotos?filter=constructiewerk", permanent: true },
+      { source: "/emd-fijnmechanica", destination: "/over-ons", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

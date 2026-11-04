@@ -1,14 +1,39 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Anybody, Atkinson_Hyperlegible_Next, IBM_Plex_Mono } from "next/font/google";
 import type { CSSProperties } from "react";
 import "./globals.css";
 import { content } from "@/content";
 import SleadsBadge from "@/components/SleadsBadge";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import MobileBar from "@/components/MobileBar";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const anybody = Anybody({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-anybody",
+  axes: ["wdth"],
+});
+
+const atkinson = Atkinson_Hyperlegible_Next({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-atkinson",
+});
+
+const plex = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-plex",
+  preload: false,
+});
 
 export const metadata: Metadata = {
-  title: content.seo.title,
+  title: {
+    default: content.seo.title,
+    template: "%s",
+  },
   description: content.seo.description,
   robots: {
     index: false,
@@ -16,12 +41,11 @@ export const metadata: Metadata = {
     nocache: true,
     googleBot: { index: false, follow: false, noimageindex: true },
   },
-  icons: content.company.logo ? { icon: content.company.logo } : undefined,
+  icons: { icon: content.company.logo },
 };
 
 export const viewport: Viewport = { themeColor: content.colors.primary };
 
-// Sleads demo-analytics (cookieloos). Events tellen alleen voor slugs die via POST /api/demos geregistreerd zijn.
 const TRACKER_SRC = "https://sleads-demo-analytics.vercel.app/t.js";
 const TRACKER_ENDPOINT = "https://basic-tiger-117.convex.site/track";
 
@@ -37,12 +61,24 @@ const themeVars = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang={content.seo.lang} style={themeVars} className={`${geistSans.variable} h-full scroll-smooth antialiased`}>
+    <html
+      lang={content.seo.lang}
+      style={themeVars}
+      className={`${anybody.variable} ${atkinson.variable} ${plex.variable} h-full antialiased`}
+    >
       <head>
         <script async src={TRACKER_SRC} data-demo={content.slug} data-endpoint={TRACKER_ENDPOINT} />
       </head>
-      <body className="min-h-full flex flex-col">
-        {children}
+      <body className="flex min-h-full flex-col">
+        <a href="#inhoud" className="skip">
+          Naar inhoud
+        </a>
+        <Header />
+        <main id="inhoud" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+        <MobileBar />
         <SleadsBadge />
       </body>
     </html>
